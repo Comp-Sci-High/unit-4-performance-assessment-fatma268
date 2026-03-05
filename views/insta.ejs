@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed - My Instagram Remake</title>
+  <link rel="stylesheet" href="overview.css">
+</head>
+<body>
+  <header>
+    <h1>Feed</h1>
+    <a href="index.html" class="button">Back to Home</a>
+  </header>
+
+  <main class="feed">
+   <% for(i = 0; i < posts.length; i++) { %>
+    <div class="post">
+      <div class="post-header">
+        <img src="<%= posts[i].profileImg %>" alt="Sunny" class="profile-img">
+        <span class="username"><%= posts[i].username %></span>
+      </div>
+      <img src="<%= posts[i].postImg %>" alt="Beach" class="post-img">
+      <div class="post-info">
+        <p class="caption"><%= posts[i].caption %></p>
+        <p class="likes-comments"><%= posts[i].likes %> likes ·<%= posts[i].comments %> comments</p>
+      </div>
+    </div>
+    <% } %>
+    </div>
+  </main>
+</body>
+</html>
